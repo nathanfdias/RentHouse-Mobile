@@ -5,6 +5,8 @@ import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
 import New from '../components/New';
+import House from '../components/House';
+import Recommended from '../components/recommended';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -26,6 +28,26 @@ export default function Home() {
         <New cover={require('../assets/house2.jpg')} name="Casa Floripa" description="Casa nova uma quadra do mar, lugar seguro e monitorado 24 horas." onPress={() => navigation.navigate('detail')}/>
 
         <New cover={require('../assets/house3.jpg')} name="Rancho SP" description="Casa nova uma quadra do mar, lugar seguro e monitorado 24 horas." onPress={() => navigation.navigate('detail')}/>
+      </ScrollView>
+
+      <View style={{flexDirection: 'row', marginBottom:10, alignItems: 'center'}}>
+        <Text style={[styles.title, {marginTop: 20}]}>Próximo de você</Text>
+      </View>
+
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{paddingHorizontal: 15, }}>
+        <House cover={require('../assets/house4.jpg')}/>
+        <House cover={require('../assets/house5.jpg')}/>
+        <House cover={require('../assets/house6.jpg')}/>
+      </ScrollView>
+
+      <Text style={[styles.title, {marginTop: 20}]}>
+        Dica do dia
+      </Text>
+
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{paddingHorizontal: 15}}>
+        <Recommended cover={require('../assets/house1.jpg')} house="Casa Floripa" offer="20%"/>
+        <Recommended cover={require('../assets/house2.jpg')} house="Casa São Paulo" offer="10%"/>
+        <Recommended cover={require('../assets/house6.jpg')} house="Rancho Praia" offer="15%"/>
       </ScrollView>
    </ScrollView>
   );
