@@ -21,6 +21,7 @@ function Rotas(){
                 headerTitleStyle:{
                     fontFamily: 'Montserrat_700Bold'
                 },
+                headerTitleAlign:'left',
 
                 headerRight: () => (
                     <TouchableOpacity style={{ marginRight: 15 }}>
@@ -37,21 +38,22 @@ function Rotas(){
                 name="detail" 
                 component={Detail} 
                 options={{
-                title: 'Detalhe',
-                headerTitleStyle:{
-                    fontFamily: 'Montserrat_700Bold'
-                },
-
-                headerRight: () => (
-                    <TouchableOpacity style={{ marginRight: 15 }}>
-                    <Feather
-                    name="shopping-bag"
-                    size={24}
-                    color="black"
-                    />
-                    </TouchableOpacity>
-                )
-                }}
+                    title: 'DETALHE',
+                    headerTitleStyle:{
+                        fontFamily: 'Montserrat_700Bold'
+                    },
+                    headerTitleAlign:'left',
+    
+                    headerRight: () => (
+                        <TouchableOpacity style={{ marginRight: 15 }}>
+                        <Feather
+                        name="shopping-bag"
+                        size={24}
+                        color="black"
+                        />
+                        </TouchableOpacity>
+                    )
+                    }}
 
                 />
             </Stack.Navigator>
