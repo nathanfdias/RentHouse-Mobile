@@ -42,7 +42,7 @@ function Rotas(){
                     headerTitleStyle:{
                         fontFamily: 'Montserrat_700Bold'
                     },
-                    headerTitleAlign:'left',
+                    headerTitleAlign:'center',
     
                     headerRight: () => (
                         <TouchableOpacity style={{ marginRight: 15 }}>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Text, StyleSheet, ImageBackground } from 'react-native';
 
-export default function Recommended(props) {
+export default function Recomendados(props) {
  return (
-    <ImageBackground source={props.cover} style={styles.container} blurRadius={2}>
-        <Text style={styles.house}>
+    <ImageBackground source={props.cover} style={styles.container} blurRadius={4}>
+        <Text style={[styles.house, styles.shadow]}>
            {props.house}
         </Text>
-        <Text style={styles.description}>
+        <Text style={[styles.description , styles.shadow]}>
             {props.offer}
         </Text>
     </ImageBackground>
@@ -19,9 +19,7 @@ const styles = StyleSheet.create({
         height: 130,
         width: 230,
         marginRight: 20,
-        borderRadius: 10,
         marginBottom: 40,
-        opacity: 0.8,
         backgroundColor: 'black',
         marginLeft: 3,
         padding: 12,
@@ -29,6 +27,16 @@ const styles = StyleSheet.create({
     },
     house:{
         fontFamily: 'Montserrat_700Bold',
-
+        color: '#FFF',
+        fontSize: 15,
+    },
+    description:{
+        fontFamily: 'Montserrat_700Bold',
+        color: '#FFF',
+    },
+    shadow:{
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 3,
+        textShadowColor: '#000',
     }
 })

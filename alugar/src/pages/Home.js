@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import New from '../components/New';
 import House from '../components/House';
-import Recommended from '../components/recommended';
+import Recomendados from '../components/Recomendados';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -45,9 +45,9 @@ export default function Home() {
       </Text>
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{paddingHorizontal: 15}}>
-        <Recommended cover={require('../assets/house1.jpg')} house="Casa Floripa" offer="20%"/>
-        <Recommended cover={require('../assets/house2.jpg')} house="Casa São Paulo" offer="10%"/>
-        <Recommended cover={require('../assets/house6.jpg')} house="Rancho Praia" offer="15%"/>
+        <Recomendados cover={require('../assets/house1.jpg')} house="Casa Floripa" offer="20%"/>
+        <Recomendados cover={require('../assets/house2.jpg')} house="Casa São Paulo" offer="10%"/>
+        <Recomendados cover={require('../assets/house6.jpg')} house="Rancho Praia" offer="15%"/>
       </ScrollView>
    </ScrollView>
   );

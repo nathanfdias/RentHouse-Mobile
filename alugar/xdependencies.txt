@@ -8,3 +8,7 @@ npm install @react-navigation/native-stack
 
 npm install react-native-ionicons@^4.x
 
+expo install react-native-swiper
+
+expo install react-native-stars
+
